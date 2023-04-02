@@ -1,0 +1,654 @@
+/**index.html css**/
+/*navbar css*/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav.scrolled {
+  background: #ffffff;
+  box-shadow: 5px -1px 12px -5px grey;
+  transition: background .5s; 
+}
+
+.logoclass {
+  font-size: 25px;
+  font-family: 'Raleway';
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.logoclass:hover {
+  color: #000000;  
+  text-decoration: none;
+}
+
+.HoverClass1:hover {color: #0cf151 !important;}
+.HoverClass2:hover {color: #0cf151 !important;}
+
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.px-lg-5 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+}
+
+.link {
+  font-size: 25px;
+  font-family: 'Raleway';
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+
+.link:hover {
+  color: #fff;  
+  text-decoration: none;
+}
+
+
+.navbar-nav > li{
+  padding-left:50px;
+  padding-right:10px;
+}
+.navbar-light .navbar-brand {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color:#fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-toggler {
+  background: #fff;
+}
+
+.navbar-nav {
+  text-align: center;
+  padding-top: 1;
+}
+
+.nav-link {
+  padding: 1rem 2rem;
+}
+
+.nav-link.active,.nav-link:focus{
+  color: #fff;
+}
+
+.navbar-toggler {
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover  {
+  color: #0cf151;
+}
+
+/*header css*/
+.masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 20rem;
+
+  padding: 19rem 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../images/2.png");
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.half1 {
+  font-family: "Varela Round";
+  font-size: 8rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.half2 {
+  font-family: "Varela Round";
+  font-size: 8.3rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), green);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.text-white-50 {
+  --bs-text-opacity: 1;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.masthead h2{
+  max-width: 45rem;
+  font-size: 1.4rem;
+  font-family: "Nunito";
+  font-weight: 900;
+}
+.btn-primary1 {
+  color: #fff;
+  background-color: #64a19d;
+  border-color: #64a19d;
+  width: 18%;
+  padding: 1.75%;
+  font-family: 'Varela Round';
+  font-size: small;
+  letter-spacing: 0.3rem;
+}
+.btn-primary1:hover {
+  color: #fff;
+  background-color: #558985;
+  border-color: #50817e;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #64a19d;
+  border-color: #64a19d;
+  width: 19%;
+  padding: 1.75%;
+  font-family: 'Varela Round';
+  font-size: small;
+  letter-spacing: 0.3rem;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #558985;
+  border-color: #50817e;
+}
+
+
+/*about css*/
+
+#about {
+  background: linear-gradient(to bottom,rgba(227, 251, 219, 0.9), rgba(255, 255, 255, 0));
+  margin: 0px;
+  padding-top: 110px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+  
+}
+.titlepage span  {
+  font-size: 24px;
+  color: #6b7908;
+  line-height: 30px;
+  font-weight: bold;
+  padding-bottom: 16px;
+  display:block;
+  text-transform: uppercase;
+}
+
+.titlepage h2 {
+  font-size: 30px;
+  color: #999998;
+  line-height: 50px;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+}
+
+.about_img figure {
+  margin: 0;
+}
+
+.d_flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about_img figure img {
+  box-shadow: 0 0 16px 3px #00000055;
+  transition: ease-in all 0.5s; 
+  border-radius: 5px;
+}
+
+.about .titlepage {
+  padding-bottom: 0;
+  max-width: 630px;
+  width: 100%;
+  height: 100%;
+  float: right;
+}
+
+.titlepage p {
+  padding-top: 10px;
+  color: #000000;
+  font-size: 17px;
+  font-family: 'Montserrat';
+}
+
+.about {
+  margin-top: 35px;
+  margin-bottom: 5px;
+}
+
+.about_img figure img:hover {
+  box-shadow: 0 0 16px 3px #0000007f;
+  transition: ease-in all 0.5s;
+}
+
+/*crop css*/
+#crop {
+  background: linear-gradient(to bottom,rgba(227, 251, 219, 0.9), rgba(255, 255, 255, 0));
+  margin: 0px;
+  padding-top: 10rem;
+  padding-bottom: 120px;
+  
+}
+
+.crop .titlepage {
+  padding-bottom: 15px;
+  max-width: 630px;
+  max-height:fit-content ;
+  width: 100%;
+  float: right;
+}
+.crop {
+  margin-top: 35px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #64a19d;
+  border-color: #64a19d;
+  width: 35%;
+  padding: 1.75%;
+  font-family: 'Varela Round';
+  font-size: small;
+  letter-spacing: 0.3rem;
+}
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #558985;
+  border-color: #50817e;
+}
+
+/*fertilizer css*/
+#fertilizer {
+  background: linear-gradient(to bottom,rgba(227, 251, 219, 0.9), rgba(255, 255, 255, 0));
+  margin: 0px;
+  padding-top: 11rem;
+  padding-bottom: 100px;
+  
+}
+
+.fertilizer .titlepage {
+  padding-bottom: 15px;
+  max-width: 630px;
+  width: 100%;
+  float: right;
+}
+.fertilizer {
+  margin-top: 35px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+}
+
+/*contact css*/
+#contact {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../images/7.jpg");
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  margin: 0 auto;
+
+  padding: 13rem;
+  padding-bottom: 0.5%;
+}
+
+.contact {
+  margin-top: 35px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+}
+
+
+.contact-head{
+    font-family: "Varela Round";
+    font-size: 6rem;
+    line-height: 1rem;
+    letter-spacing: 0.8rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+            background-clip: text;
+  
+}
+
+.contact-card{
+  padding: 2.5rem;
+  width: 21rem;
+  height: 14rem;
+  border: 0;
+  border-bottom: 0.25rem solid #64a19d;
+}
+
+
+.card-text{
+    color: #121a19;
+    font-family: 'Varela Round';
+    font-size: small;
+    letter-spacing: 0.3rem;
+  }
+.card-subtext{
+  color: #121a19;
+    font-family: 'Source Sans Pro';
+    font-size: 1rem;
+}
+
+.social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 200%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.5rem;
+}
+
+.social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.social a:active {
+  color: #fff;
+}
+
+
+/**crop.html css**/
+
+#crop-nav-link{
+  color:  #000; 
+  text-decoration: none;
+}
+#crop-nav-link:hover{
+  color:  #0cf151; 
+  text-decoration: none;
+}
+
+#mycropnav{
+  padding-top: 0.00001px;
+  padding-bottom: 0.00001px;
+
+  background: #ffffff;
+  box-shadow: 5px -1px 12px -5px grey;
+  transition: background .5s; 
+}
+
+.crop-masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 16rem;
+
+  padding: 12.9rem 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.833) 75%, #000 100%), url("../images/crop-bg.png");
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.crop-result-masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 16rem;
+
+  padding: 12.9rem 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.833) 75%, #000 100%), url("../images/crop-result.png");
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.crop-masthead h2{
+  max-width: 45rem;
+  font-size: 1.4rem;
+  font-family: "Nunito";
+  font-weight: 900;
+}
+
+
+.crop-half1 {
+  font-family: "Varela Round";
+  font-size: 3rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.crop-half2 {
+  font-family: "Varela Round";
+  font-size: 3rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), green);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.crop-result-half2 {
+  font-family: "Varela Round";
+  font-size: 4rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgb(205, 6, 6));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+
+.crop-titlepage p {
+  padding-top: 0.4rem;
+  font-size: 3vh;
+  font-family: 'Montserrat';
+  text-align: center;
+}
+
+#crop-rec {
+  background: linear-gradient(to bottom,rgba(227, 251, 219, 0.9), rgba(255, 255, 255, 0));
+  margin: 0;
+  padding-top: 4rem;
+  padding-bottom: 60px;
+  padding-left: 7rem;
+  padding-right: 4rem;
+  min-height: auto;  
+}
+
+
+/*crop recommedation form css*/
+
+.crop-form{
+  width: 450px;
+  height: auto;
+  margin: 0px auto;
+  background: linear-gradient(to bottom,rgba(227, 251, 219, 0.9), rgb(6, 173, 159));
+
+  color: black;
+  border-radius: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 5px -1px 12px -5px grey;
+  border: #092225;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.btn-form {
+  margin-top: 1%;
+  color: #000;
+  background-color: #64a19d;
+  border-color: #64a19d;
+  width: 10%;
+  padding: 1%;
+  font-family: 'Varela Round';
+  font-size: large;
+  letter-spacing: 0.3rem;
+}
+.btn-form:hover {
+  color: #fff;
+  background-color: #558985;
+  border-color: #50817e;
+}
+
+.footer-bg{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 3%;
+  background-color: #092225;
+
+  
+ color: rgb(164, 159, 159);
+  background-size: cover;
+  margin: 0 auto;
+}
+
+
+a.move-top {
+  width: 34px;
+  height: 34px;
+  background: url(../images/move-top.png) no-repeat;
+  display: inline-block;
+  position: fixed;
+  bottom: 4%;
+  right: 2%;
+  z-index: 0;
+}
+
+/**fertilizer.html css**/
+.ferti-masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 16rem;
+
+  padding: 12rem 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.833) 75%, #000 100%), url("../images/banner.jpg");
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  margin: 0 auto;
+}
+.ferti-masthead h2{
+  max-width: 45rem;
+  font-size: 1.4rem;
+  font-family: "Nunito";
+  font-weight: 900;
+}
+
+#fert-rec {
+  background: linear-gradient(to bottom,rgba(227, 251, 219, 0.9), rgba(255, 255, 255, 0));
+  margin: 0;
+  padding-top: 9rem;
+  padding-bottom: 10rem;
+  padding-left: 7rem;
+  padding-right: 4rem;
+  min-height: auto;  
+}
+
+.fert-form{
+  width: 450px;
+  height: auto;
+  margin: 0px auto;
+  background: linear-gradient(to bottom,rgba(227, 251, 219, 0.9), rgb(6, 173, 159));
+
+  color: black;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 5px -1px 12px -5px grey;
+  border: #092225;
+  border-style: solid;
+  border-width: 1px;
+}

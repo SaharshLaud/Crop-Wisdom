@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crop Wisdom</title>
+    <link href="{{ url_for('static', filename='images/title1.png') }}" rel="icon"/>
+
+    
+    <!--External CSS-->    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+
+        
+
+    <!-- Bootstrap core CSS -->    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    
+  </head>
+    
+
+  <body>
+  <!--Start of Navbar-->
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light fixed-top" id="mycropnav">
+        <div class="container px-4 px-lg-5">
+          <a class="logoclass" href="{{ url_for('home') }}">Crop<span style="color: green;">Wisdom</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto" >
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}" id="crop-nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('crop_recommend') }}"id="crop-nav-link" >Crop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="crop-nav-link">Fertilizer</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+    </nav>
+  <!--End of Navbar-->
+
+  <!--Start of Header-->
+  <div class="ferti-masthead" id="ferti-home"> 
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+      <div class="d-flex justify-content-center">
+          <div class="text-center">
+              <h1 class="mx-auto my-0 text-uppercase"><span class="crop-half1">Fertilizer</span> <span class="crop-half2">Suggestion</span> <span class="crop-half1">SYSTEM</span></h1>
+              <br><br>
+              <h2 class="text-white-50 mx-auto mt-2 mb-5">Introducing our innovative fertilizer recommendation system, 
+                designed to help farmers and growers optimize their crop yields. By inputting soil data and crop type, 
+                our application predicts soil deficiencies and excesses, providing personalized recommendations 
+                for improvements. With our user-friendly platform, achieving the ideal nutrient balance for healthy
+                 and robust crops has never been easier.</h2><br>
+              <a class="btn btn-primary" href="#fert-rec">GET STARTED&nbsp;</a>
+          </div>
+      </div>
+  </div>
+</div> 
+<!--End of Header-->
+
+
+<!--Start of Crop Recommendation-->
+<div class="container-fluid" id="fert-rec">
+      
+    <div class="crop-titlepage">
+       <p style="color: #6b7908;;">Get data-driven recommendations on fertilizer selection based on crop-specific nutrient demands.</p>
+
+
+       <br>
+       <div>
+         <form method="POST" action="{{ url_for('fert_recommend') }}" style="font-family: Montserrat; font-size: large;">
+           <div class="fert-form">
+           <div class="form-group">
+             <label for="Nitrogen" style="font-size: 17px"><b>Nitrogen</b></label>
+             <input type="number" class="form-control" id="Nitrogen" name="nitrogen" placeholder="Enter the value (example:50)" required>
+           </div>
+
+           <div class="form-group">
+             <label for="Phosphorous" style="font-size: 17px"><b>Phosphorous</b></label>
+             <input type="number" class="form-control" id="Phosphorous" name="phosphorous" placeholder="Enter the value (example:50)"  required>
+           </div>
+
+           <div class="form-group">
+             <label for="Pottasium" style="font-size: 17px"><b>Pottasium</b></label>
+             <input type="number" class="form-control" id="Pottasium" name="pottasium" placeholder="Enter the value (example:50)" required>
+           </div>
+
+
+           <div class="form-group">
+             <label for="crop" style="font-size: 17px"><b>Crop you want to grow</b></label>
+
+           <select name="cropname" class="form-control" id="crop1" placeholder="Select a crop"  required>
+             <option selected>Select crop</option>
+             <option>Rice</option>
+             <option>Maize</option>
+             <option>Chickpea</option>
+             <option>Kidneybeans</option>
+             <option>PigeonPeas</option>
+             <option>Mothbeans</option>
+             <option>Mungbean</option>
+             <option>Blackgram</option>
+             <option>Lentil</option>
+             <option>Pomegranate</option>
+             <option>Banana</option>
+             <option>Mango</option>
+             <option>Grapes</option>
+             <option>Watermelon</option>
+             <option>Muskmelon</option>
+             <option>Apple</option>
+             <option>Orange</option>
+             <option>Papaya</option>
+             <option>Coconut</option>
+             <option>Cotton</option>
+             <option>Jute</option>
+             <option>Coffee</option>
+           </select>
+           </div>                    
+         </div>
+         <br>
+         <div class="d-flex justify-content-center">
+           <button type="submit" class="btn btn-form">Predict</button>                      
+         </div>
+         </form>
+       </div>            
+</div>
+</div>
+<!--End of Crop Recommendation-->
+
+  <!--  Start of Footer -->
+	<footer class="footer-bg text-center">
+
+    <a class="link" href="{{ url_for('home') }}"id="logo" >Crop<span style="color: green;">Wisdom</span></a>
+    <br><br>
+    <div class="text-center">
+      <p>An Agricultural Intelligence Company<br> </p>
+    </div>
+    <p class="homelogo">
+    <p>Made with ❤️ by Team Crop Wisdom</p>
+    <p>&copy; Copyright 2023 Crop Wisdom</p>
+  </footer>
+  <!--End of Footer-->
+
+  <!--Start of Move to Top--> 
+  <a href="#ferti-home" class="move-top text-center"><i class="fa-duotone fa-up-to-line"></i></a>
+  <!--End of Move to Top-->
+
+  
+  <!--Font Awesome Icons-->
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  
+  </body>
+  
+</html>

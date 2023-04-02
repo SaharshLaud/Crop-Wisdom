@@ -1,0 +1,26 @@
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+
+<body style="background: linear-gradient(to bottom,rgba(227, 251, 219, 0.9), rgb(6, 173, 159)); padding: 6%;">
+        
+        <div>
+          <div style="display: flex;justify-content: center;">
+
+          <img src="{{ url_for('static', filename='images/oops-warning.png') }}" width="400rem">
+            
+          </div>
+          
+          <h1 style="color: black; text-align: center; font-family: Nunito;"><b>Sorry the Machine Learning Algorithm couldn't process your request
+              currently. <br> Please try again</b>
+              <br>
+  <br>
+  
+          <a href="{{ url_for('home') }}">
+            <button type="submit"  style="padding: 0.5rem;color: black; text-align: center; font-family: Nunito;font-size: 1.5rem;font-weight: bold;">
+              Try again
+            </button>
+          </a></h1>
+        </div>
+      
+</body>

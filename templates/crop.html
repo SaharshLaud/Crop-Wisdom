@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crop Wisdom</title>
+    <link href="{{ url_for('static', filename='images/title1.png') }}" rel="icon"/>
+
+    
+    <!--External CSS-->    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <!--Javascript files-->
+  <script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+
+    <!--Font Awesome Icons-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>    
+
+    <!-- Bootstrap core CSS -->    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    
+  </head>
+    
+
+  <body>
+  <!--Start of Navbar-->
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light fixed-top" id="mycropnav">
+        <div class="container px-4 px-lg-5">
+          <a class="logoclass" href="{{ url_for('home') }}">Crop<span style="color: green;">Wisdom</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto" >
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}" id="crop-nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"id="crop-nav-link" >Crop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}" id="crop-nav-link">Fertilizer</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+    </nav>
+  <!--End of Navbar-->
+
+  <!--Start of Header-->
+  <div class="crop-masthead" id="crop-home"> 
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+      <div class="d-flex justify-content-center">
+          <div class="text-center">
+              <h1 class="mx-auto my-0 text-uppercase"><span class="crop-half1">CROP</span> <span class="crop-half2">RECOMMENDATION</span> <span class="crop-half1">SYSTEM</span></h1>
+              <br><br>
+              <h2 class="text-white-50 mx-auto mt-2 mb-5">Unlock the full potential of your farm with our AI-powered 
+                crop recommendation system, designed to analyze data on soil health, climate conditions, 
+                and other factors to provide personalized recommendations for crop selection and cultivation practices.</h2><br>
+              <a class="btn btn-primary" href="#crop-rec">GET STARTED<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+          </div>
+      </div>
+  </div>
+</div> 
+<!--End of Header-->
+
+<!--Start of Crop Recommendation-->
+  <div class="container-fluid" id="crop-rec">
+      
+             <div class="crop-titlepage">
+                <p style="color: #6b7908;;">Optimize crop selection for your farm's conditions with our specialized analysis tool.</p>
+                
+                <div>
+                  <form method="POST" action="{{ url_for('crop_prediction') }}" style="font-family: Montserrat; font-size: smaller;">
+                    <div class="crop-form">
+                    <div class="form-group">
+                      <label for="Nitrogen" style="font-size: 13px"><b>Nitrogen</b></label>
+                      <input type="number" class="form-control" id="Nitrogen" name="nitrogen" placeholder="Enter the value (example:50)" style="font-size: smaller;" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Phosphorous" style="font-size: 13px"><b>Phosphorous</b></label>
+                      <input type="number" class="form-control" id="Phosphorous" name="phosphorous" placeholder="Enter the value (example:50)" style="font-size: smaller;" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Pottasium" style="font-size: 13px"><b>Pottasium</b></label>
+                      <input type="number" class="form-control" id="Pottasium" name="pottasium" placeholder="Enter the value (example:50)" style="font-size: smaller;" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="ph" style="font-size: 13px"><b>pH Level</b></label>
+                      <input type="number" step="0.01" class="form-control" id="ph" name="ph" placeholder="Enter the value" style="font-size: smaller;" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Rainfall" style="font-size: 13px"><b>Rainfall (in mm)</b></label>
+                      <input type="number" step="0.01" class="form-control" id="Rainfall" name="rainfall" placeholder="Enter the value" style="font-size: smaller;" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="State" style="font-size: 13px "><b>State</b></label>
+                      <select onchange="print_city('state', this.selectedIndex);" id="sts" name="stt" class="form-control" style="font-size: smaller;" required></select>
+                      <br />
+                      <label for="City" style="font-size: 13px"><b>City</b></label>
+                      <select id="state" class="form-control" name="city" style="font-size: smaller;" required></select>                      
+                      <script language="javascript"> print_state("sts"); </script>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-form">Predict</button>                      
+                  </div>
+                  </form>
+                </div>            
+  </div>
+  </div>
+  <!--End of Crop Recommendation-->
+
+  <!--  Start of Footer -->
+	<footer class="footer-bg text-center">
+
+    <a class="link" href="{{ url_for('home') }}"id="logo" >Crop<span style="color: green;">Wisdom</span></a>
+    <br><br>
+    <div class="text-center">
+      <p>An Agricultural Intelligence Company<br> </p>
+    </div>
+    <p class="homelogo">
+    <p>Made with ❤️ by Team Crop Wisdom</p>
+    <p>&copy; Copyright 2023 Crop Wisdom</p>
+  </footer>
+  <!--End of Footer-->
+
+  <!--Start of Move to Top--> 
+  <a href="#crop-home" class="move-top text-center"><i class="fa-duotone fa-up-to-line"></i></a>
+  <!--End of Move to Top-->
+
+  
+
+  <!--Font Awesome Icons-->
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script> 
+  
+  </body>
+  
+</html>

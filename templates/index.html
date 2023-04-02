@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crop Wisdom</title>
+	<link href="{{ url_for('static', filename='images/title1.png') }}" rel="icon"/>
+
+
+    <!--External CSS-->    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    
+  </head>
+
+  <body>
+  <!--Start of Navbar-->
+    <nav class="navbar navbar-default navbar-expand-lg navbar-light fixed-top" id="mynav">
+        <div class="container px-4 px-lg-5">
+          <a class="link" href="#"id="logo" >Crop<span style="color: green;">Wisdom</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#about" id="one">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#crop" id="two">Crop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#fertilizer" id="three">Fertilizer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact" id="four">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  <!--End of Navbar-->
+
+  <!--Start of Header-->
+  <div class="masthead" id="home"> 
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+      <div class="d-flex justify-content-center">
+          <div class="text-center">
+              <h1 class="mx-auto my-0 text-uppercase"><span class="half1">CROP</span><span class="half2">WISDOM</span></h1>
+              <h2 class="text-white-50 mx-auto mt-2 mb-5">A one-stop solution for all your crop and fertilizer insights powered by Machine Learning</h2>
+              <a class="btn btn-primary1" href="#about">&nbsp;GET STARTED &nbsp;&nbsp;</a>
+          </div>
+      </div>
+  </div>
+</div> 
+  <!--End of Header-->
+
+  <!--Start of About-->
+  <div class="about" id="about">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-lg-6 col-md-12">
+                  <div class="titlepage text_align_left">
+                     <span>About Us</span>
+                     <h2>We are the next generation of agricultural insights.</h2>
+                     
+                     <p>Agriculture is a crucial sector of the Indian economy, employing over half of the country's workforce and accounting for around 16% of its GDP.</p>
+                     <p>Despite being the world's second-largest producer of food crops, Indian agriculture faces challenges like soil degradation, water scarcity, and climate change.</p>
+                     <p>Our Crop and Fertilizer Recommendation System uses AI and machine learning to suggest the ideal fertilizer type and amount for each crop, reducing waste and increasing yields. Our goal is to make it accessible to all Indian farmers and empower them for a sustainable agricultural sector.</p>
+                     <p>We analyze data on factors such as soil type, nutrient content, pH levels, crop type, planting date, and rainfall patterns to determine the optimal fertilizer use for Indian crops. Our system aims to reduce pollution and improve yields while making agriculture more sustainable and profitable for all farmers.</p>
+                  
+                    </div>
+               </div>
+                  <div class="row d_flex">
+                   <div class="col-md-7">
+                     <div class="about_img">
+                        <figure><img src="{{ url_for('static', filename='images/8.png') }}" alt="#"style="height: 23em;">
+                        </figure>
+                     </div>
+                   </div>
+                   <div class="col-md-5">
+                     <div class="about_img">
+                        <figure><img src="{{ url_for('static', filename='images/9.png') }}" alt="#" style="height: 15em;">
+                          
+                        </figure>
+                     </div>
+                   </div>
+                  </div>
+               
+            </div>
+         </div>
+  </div>
+  <!--End of About-->
+
+
+  <!--Start of Crop-->
+  <div class="crop" id="crop">
+    <div class="container-fluid">
+       <div class="row d_flex">
+          <div class="col-lg-6 col-md-12">
+             <div class="titlepage text_align_left">
+                <h2 style="color: #6b7908;;">Crop Recommendation System</h2>
+                
+               <p>By performing the 
+                  primary role of an agro consultant, this system provides farmers with personalized
+                   recommendations to optimize crop yield and increase profitability. <br><br>With the use of advanced algorithms, 
+                   the crop recommendation system can accurately factor in relevant data to provide real-time crop recommendations 
+                   that enable farmers to make informed decisions.<br><br> Overall, this technology has the potential to revolutionize the 
+                   agricultural industry by providing farmers with valuable insights and improving crop production.</p>
+                
+                   <br>
+                   <a class="btn btn-secondary" href="{{ url_for('crop_recommend') }}">&nbsp;EXPLORE MORE </a>
+               </div>
+          </div>
+             <div class="row d_flex">
+              <div class="col-md-12">
+                <div class="about_img">
+                   <figure style="padding-left: 8rem;"><img src="{{ url_for('static', filename='images/3.png') }}" alt="#"style="height: 30em; width=30rem">
+                   </figure>
+                </div>
+              </div>
+              
+             </div>
+          
+       </div>
+    </div>
+  </div>
+  <!--End of Crop-->
+
+  <!--Start of Fertilizer-->
+  <div class="fertilizer" id="fertilizer">
+    <div class="container-fluid">
+       <div class="row d_flex">
+          <div class="col-lg-6 col-md-12">
+             <div class="titlepage text_align_left">
+                <h2 style="color: #6b7908;;">Fertilizer Suggestion System</h2>
+                
+               <p>The process of determining the right fertilizers for your crops can be simplified 
+                with our fertilizer suggestion tool. <br><br>All you need to do is input information
+                 about your soil's nutrient content and the crop you intend to grow. The tool then analyzes the data 
+                 to identify any nutrient deficiencies or excesses in the soil and recommends appropriate fertilizers 
+                 to address these issues. <br><br>With this approach, you can avoid wasting money on unnecessary fertilizers while ensuring that your crops receive the nutrients they need to thrive.
+                   <br><br><br>
+                   <a class="btn btn-secondary" href="{{ url_for('fertilizer_recommendation') }}">&nbsp;EXPLORE MORE </a>
+               </div>
+          </div>
+             <div class="row d_flex">
+              <div class="col-md-12">
+                <div class="about_img">
+                   <figure style="padding-left: 7rem;"><img src="{{ url_for('static', filename='images/6.png') }}" alt="#"style="height: 25em; width=25rem">
+                   </figure>
+                </div>
+              </div>
+              
+             </div>
+          
+       </div>
+    </div>
+  </div>
+  <!--End of Fertilizer-->
+
+  <!--Start of Contact-->
+  <div class="contact" id="contact">
+    <span class="contact-head">Contact Us!</span><br><br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-4 card-outside">
+          <div class="card text-center contact-card">
+            <i class="fas fa-map-marked-alt" style="color: rgb(81, 204, 175);"></i><br>
+            <h4 class="text-uppercase card-text">Address</h4>
+            <hr class="mx-auto" style="color: #64a19d; width: 10rem;">
+            <div class="card-subtext">Symbiosis University of Applied Sciences, Indore, India</div>
+        </div>
+        </div>
+        <div class="col-4">
+          <div class="card text-center contact-card">
+            <i class="fas fa-envelope" style="color: rgb(81, 204, 175);" ></i><br>
+            <h4 class="text-uppercase card-text">Email</h4>
+            <hr class="mx-auto" style="color: #64a19d; width:10rem;">
+            <div class="card-subtext"><a href="#!" style="text-decoration: none;">yugidark00@gmail.com</a></div>
+        </div>
+        </div>
+        <div class="col-4">
+          <div class="card text-center contact-card">
+            <i class="fas fa-mobile-alt" style="color: rgb(81, 204, 175);"></i><br>
+            <h4 class="text-uppercase card-text">Phone</h4>
+            <hr class="mx-auto" style="color: #64a19d; width: 10rem;">
+            <div class="card-subtext">+91 917-938-3888</div>
+        </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="social d-flex justify-content-center">
+        <a href="https://twitter.com/saharshlaud"><i class="fab fa-twitter"></i></a>  &nbsp; &nbsp;
+         <a  href="https://in.linkedin.com/in/saharsh-laud"><i class="fa-brands fa-linkedin-in"></i></a>&nbsp; &nbsp;
+         <a  href="https://github.com/SaharshLaud/Crop-Wisdom"><i class="fab fa-github"></i></a>&nbsp; &nbsp;
+         <a  href="https://dev.to/saharshlaud"><i class="fa-brands fa-dev"></i></i></a>
+     </div>
+    </div>
+    <br>
+
+    <p class="text-center" style="color: white;">Made with ❤️ by Team Crop Wisdom</p>
+    <p class="text-center" style="color: white;">&copy; Copyright 2023 Crop Wisdom</p>
+  </div>
+  <!--End of Contact-->
+ 
+  <!--Javascript files-->
+  <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+  <!--Font Awesome Icons-->
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>    
+
+ <!--Start of Move to Top--> 
+ <a href="#home" class="move-top text-center"></a>
+ <!--End of Move to Top-->
+  </body>
+</html>
+

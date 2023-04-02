@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, Markup
 import numpy as np
 import pandas as pd
 from utils.fertilizer import fertilizer_dic
-
+import os
 import requests
 import config
 import pickle
@@ -143,5 +143,9 @@ def fert_recommend():
 
 
 # ===============================================================================================
+port = os.getenv("PORT")
 if __name__ == '__main__':
-    app.run(debug=False)
+    if port is None:
+        app.run(host='0.0.0.0', port=5000, debug=True)
+	else:
+        app.run(host='0.0.0.0', port=int(port), debug=False)

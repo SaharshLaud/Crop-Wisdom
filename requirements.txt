@@ -1,10 +1,6 @@
 conda==4.3.16
 dateparser==1.0.0
 debugpy==1.6.0
-decorator==5.1.1
-defusedxml==0.7.1
-deprecation==2.1.0
-et-xmlfile==1.1.0
 fastjsonschema==2.15.3
 Flask==2.1.2
 GitPython==3.1.27
@@ -17,15 +13,12 @@ ipython==7.34.0
 ipython-genutils==0.2.0
 jedi==0.18.1
 Jinja2==3.1.2
-jmespath==0.10.0
 jsonschema==4.5.1
 jupyter-client==7.3.1
 jupyter-core==4.10.0
 Markdown==3.3.7
 MarkupSafe==2.1.1
 ninja==1.10.2.4
-nltk==3.7
-notebook==6.4.11
 numpy==1.22.2
 oauthlib==3.2.0
 pandas==1.4.2
@@ -43,9 +36,5 @@ scikit-image==0.19.3
 scikit-learn==1.1.1
 scipy==1.8.1
 sklearn==0.0
-soupsieve==2.3.2.post1
-tensorboard==2.9.0
-tensorflow==2.9.1
-tensorflow-estimator==2.9.0
 urllib3==1.26.5
 Werkzeug==2.1.2
